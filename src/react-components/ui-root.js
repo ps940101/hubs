@@ -624,7 +624,7 @@ class UIRoot extends Component {
     // Push the new history state before going into VR, otherwise menu button will take us back
     clearHistoryState(this.props.history);
 
-    const muteOnEntry = this.props.store.state.preferences["muteMicOnEntry"] || false;
+    const muteOnEntry = !!this.props.store.state.preferences["muteMicOnEntry"];
     await this.props.enterScene(this.state.enterInVR, muteOnEntry);
 
     this.setState({ entered: true, entering: false, showShareDialog: false });
@@ -900,17 +900,11 @@ class UIRoot extends Component {
   };
 
   renderAudioSetupPanel = () => {
-    this.mediaDevicesManager.micShouldBeEnabled = !this.props.store.state.preferences["muteMicOnEntry"];
     // TODO: Show HMD mic not chosen warning
     return (
       <MicSetupModalContainer
         scene={this.props.scene}
         onEnterRoom={this.onAudioReadyButton}
-        onMicMuted={() =>
-          this.props.store.update({
-            preferences: { muteMicOnEntry: !this.props.store.state.preferences["muteMicOnEntry"] }
-          })
-        }
         onBack={() => this.props.history.goBack()}
       />
     );

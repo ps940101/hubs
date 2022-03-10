@@ -356,10 +356,6 @@ const preferenceLabels = defineMessages({
     id: "preferences-screen.preference.preferred-speakers",
     defaultMessage: "Preferred speakers"
   },
-  muteMicOnEntry: {
-    id: "preferences-screen.preference.mute-mic-on-entry",
-    defaultMessage: "Mute microphone on entry"
-  },
   globalVoiceVolume: {
     id: "preferences-screen.preference.global-voice-volume",
     defaultMessage: "Incoming Voice Volume"
@@ -979,7 +975,6 @@ class PreferencesScreen extends Component {
         [
           this.state.preferredMic,
           ...(MediaDevicesManager.isAudioOutputSelectEnabled ? [this.state.preferredSpeakers] : []),
-          { key: "muteMicOnEntry", prefType: PREFERENCE_LIST_ITEM_TYPE.CHECK_BOX, defaultBool: false },
           {
             key: "globalVoiceVolume",
             prefType: PREFERENCE_LIST_ITEM_TYPE.NUMBER_WITH_RANGE,

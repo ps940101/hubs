@@ -685,7 +685,7 @@ async function runBotMode(scene, entryManager) {
   };
 
   while (!NAF.connection.isConnected()) await nextTick();
-  entryManager.enterSceneWhenLoaded(false);
+  entryManager.enterSceneWhenLoaded(false, false);
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
