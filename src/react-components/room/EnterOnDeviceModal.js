@@ -72,7 +72,7 @@ export function EnterOnDeviceModal({
             </strong>
             {headsetConnected && (
               <>
-                <hr
+                {/* <hr
                   data-or-text={intl.formatMessage({ id: "enter-on-device-modal.divider-label", defaultMessage: "or" })}
                 />
                 <b>
@@ -80,7 +80,7 @@ export function EnterOnDeviceModal({
                     id="enter-on-device-modal.headset-connected-heading"
                     defaultMessage="Enter on Connected Headset"
                   />
-                </b>
+                </b> */}
                 {unsupportedBrowser ? (
                   <>
                     <small>
@@ -106,12 +106,12 @@ export function EnterOnDeviceModal({
                   </>
                 ) : (
                   <>
-                    <small>
+                    {/* <small>
                       <FormattedMessage
                         id="enter-on-device-modal.headset-connected-message"
                         defaultMessage="You have a VR headset connected to this device."
                       />
-                    </small>
+                    </small> */}
                     <Button preset="accent5" onClick={onEnterOnConnectedHeadset}>
                       <VRIcon />
                       <span>

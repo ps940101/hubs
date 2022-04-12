@@ -10,9 +10,9 @@ export default {
 };
 
 const infoMessages = [
-  { heading: "Tip:", message: "Press the Q & E keys to turn left and right." },
+  { heading: "Tip:", message: "按Q或E键向左或向右。" },
   {
-    heading: "What's New?",
+    heading: "什么是新的？",
     message: (
       <>
         You can now set the default locale in your preferences.{" "}
