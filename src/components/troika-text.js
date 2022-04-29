@@ -106,7 +106,8 @@ AFRAME.registerComponent("text", {
     mesh.depthOffset = data.depthOffset || 0;
     mesh.direction = data.direction;
     mesh.fillOpacity = data.fillOpacity;
-    mesh.font = data.fontUrl;
+    mesh.font = 'https://fonts.gstatic.com/ea/notosansscsliced/v2/NotoSansSCSliced-Regular.100.woff';
+    // mesh.font = data.fontUrl;
     mesh.fontSize = data.fontSize;
     mesh.letterSpacing = data.letterSpacing || 0;
     mesh.clipRect = data.clipRect;
